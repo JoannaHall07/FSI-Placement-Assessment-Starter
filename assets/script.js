@@ -37,13 +37,16 @@ gbPlusBtn.addEventListener('click', function() {
    gb = gb+1;
    Gingerbread.textContent = gb;
    Total.textContent = gb + cc + sugar;
+   
 })
 // Event listener for clicks on the "+" button for Gingerbread cookies
 gbMinusBtn.addEventListener('click', function() { 
     // TODO: Write the code to be run when the "+" button for "Gingerbread" is clicked
        gb = gb-1;
        Gingerbread.textContent = gb;
-       Total.textContent = gb + cc + sugar;
+       if (gb <= 0){
+          gb = 1};
+          Total.textContent = gb + cc + sugar;
     })
 // Event listener for clicks on the "+" button for Chocolate Chip cookies
 ccPlusBtn.addEventListener('click', function() { 
@@ -51,14 +54,17 @@ ccPlusBtn.addEventListener('click', function() {
        cc = cc+1;
        ChocolateChip.textContent = cc;
        Total.textContent = gb + cc + sugar;
-    })
+         })
     // Event listener for clicks on the "+" button for Chocolate Chip cookies
     ccMinusBtn.addEventListener('click', function() { 
         // TODO: Write the code to be run when the "+" button for "Chocolate Chip" is clicked
            cc = cc-1;
            ChocolateChip.textContent = cc;
+           if (cc <= 0){
+            cc = 1};
            Total.textContent = gb + cc + sugar;
-        })
+          
+                })
 // Event listener for clicks on the "+" button for Sugar Sprinkle cookies
 sugarPlusBtn.addEventListener('click', function() { 
     // TODO: Write the code to be run when the "+" button for "Sugar Sprinkle" is clicked
@@ -71,7 +77,10 @@ sugarPlusBtn.addEventListener('click', function() {
         // TODO: Write the code to be run when the "+" button for "Sugar Sprinkle" is clicked
            sugar = sugar-1;
            SugarSprinkle.textContent = sugar;
-           Total.textContent = gb + cc + sugar; 
+           if (sugar <= 0){
+            sugar = 1};
+           Total.textContent = gb + cc + sugar;
+       
     });
     
     
